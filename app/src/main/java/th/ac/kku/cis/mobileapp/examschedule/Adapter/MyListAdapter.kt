@@ -26,6 +26,7 @@ public class MyListAdapter(var mCtx: Context, var resource:Int, var items:List<S
         var tvSubjectRoom : TextView = view.findViewById(R.id.txt_room)
         var tvSubjectDate : TextView = view.findViewById(R.id.txt_date)
         var tvSubjectTime : TextView = view.findViewById(R.id.txt_time)
+        var tvSubjectSeat : TextView = view.findViewById(R.id.txt_seat)
 
 
         var subject: Subject = items[position]
@@ -35,6 +36,7 @@ public class MyListAdapter(var mCtx: Context, var resource:Int, var items:List<S
         tvSubjectRoom.text = subject.room
         tvSubjectDate.text = subject.date
         tvSubjectTime.text = subject.time
+        tvSubjectSeat.text = subject.seatstart
 
         return view
     }

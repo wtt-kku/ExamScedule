@@ -8,8 +8,10 @@ import android.view.View
 import android.widget.Toast
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
+import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
+import th.ac.kku.cis.mobileapp.examschedule.Model.RegisSub
 
 
 class MainActivity : AppCompatActivity() {
@@ -37,11 +39,34 @@ class MainActivity : AppCompatActivity() {
         FirebaseDatabase.getInstance().reference.child("Student").addValueEventListener(object : ValueEventListener{
             override fun onDataChange(p0: DataSnapshot) {
                 if(p0.hasChild(id)){
-                    Toast.makeText(this@MainActivity,"ยินดีด้วยพบรหัส "+IDStudent +" ในระบบ",Toast.LENGTH_SHORT).show()
-                    Log.d(TAG,"ไม่พบรหัส "+IDStudent +"ในระบบ")
-                    val l = Intent(this@MainActivity,ListSubject::class.java)
+                    //Toast.makeText(this@MainActivity,"ยินดีด้วยพบรหัส "+IDStudent +" ในระบบ",Toast.LENGTH_SHORT).show()
+                    Log.d(TAG,"พบ "+IDStudent +"ในระบบ")
+
+                    val StudentInfo = object : ValueEventListener{
+                        override fun onDataChange(dataSnapshot: DataSnapshot) {
+                            //Log.d(TAG+"<><><><<><><><>",dataSnapshot.getValue().toString())
+                            val info = dataSnapshot.getValue<RegisSub>()
+
+                            //Log.d(TAG+"<><><><<><><><>",info.toString())
+                            if(info!=null){
+                                val l = Intent(this@MainActivity,ListSubject::class.java)
+                                l.putExtra("idStudent",IDStudent)
+                                l.putExtra("Subject",info.RegisSub)
+                                l.putExtra("Seat",info.Seat)
+                                startActivity(l)
+                            }
+                        }
+                        override fun onCancelled(p0: DatabaseError) {
+
+                        }
+                    }
+                    Firebase.database.reference.child("Student").child(IDStudent).addValueEventListener(StudentInfo)
+
+
+
+/*                    val l = Intent(this@MainActivity,ListSubject::class.java)
                     l.putExtra("idStudent",IDStudent)
-                    startActivity(l)
+                    startActivity(l)*/
 
                 }
                 else{

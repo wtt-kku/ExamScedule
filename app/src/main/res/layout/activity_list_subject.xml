@@ -8,17 +8,23 @@
     tools:context=".ListSubject">
 
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#CC881F"
-        android:fontFamily="@font/kanit"
-        android:paddingTop="15sp"
-        android:paddingBottom="15sp"
-        android:text="รายวิชาท้ังหมด"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#CC881F"
+            android:fontFamily="@font/kanit"
+            android:paddingTop="15sp"
+            android:paddingBottom="15sp"
+            android:text="รายวิชาท้ังหมด"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+    </LinearLayout>
 
     <LinearLayout
 
