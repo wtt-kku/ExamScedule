@@ -123,7 +123,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/kanit"
                 android:paddingLeft="3sp"
-                android:text="[Date]"
+                android:text="[Seat]"
                 android:textColor="#3A3A3A" />
         </LinearLayout>
     </LinearLayout>
