@@ -61,8 +61,6 @@ class staff_login : AppCompatActivity() {
                     }
                 }
             }
-
-
     }
 
     fun goMain(view: View){

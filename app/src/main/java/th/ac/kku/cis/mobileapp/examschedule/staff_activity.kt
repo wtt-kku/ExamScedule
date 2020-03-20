@@ -32,6 +32,4 @@ class staff_activity : AppCompatActivity() {
             finish()
         }
     }
-
-
 }

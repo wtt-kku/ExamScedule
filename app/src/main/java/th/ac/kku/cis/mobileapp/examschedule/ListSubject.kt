@@ -17,8 +17,6 @@ import th.ac.kku.cis.mobileapp.examschedule.Adapter.MyListAdapter
 import th.ac.kku.cis.mobileapp.examschedule.Model.RegisSub
 import th.ac.kku.cis.mobileapp.examschedule.Model.Subject
 
-
-
 class ListSubject : AppCompatActivity() {
 
     private val TAG: String = "ListSubject"
@@ -29,56 +27,9 @@ class ListSubject : AppCompatActivity() {
     lateinit var Seat_fromMain:String
 
 
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_subject)
-
-        /*var l = intent
-        idStudent_fromMain = intent.getStringExtra("idStudent")
-        Subject_fromMain = intent.getStringExtra("Subject")
-        Seat_fromMain = intent.getStringExtra("Seat")
-        val eachsubject= Subject_fromMain.split(',')
-        numRegisSub = eachsubject.size*/
-
-        //Toast.makeText(this,numRegisSub.toString(),Toast.LENGTH_SHORT).show()
-        /*val StudentInfo = object : ValueEventListener{
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                //Log.d(TAG+"<><><><<><><><>",dataSnapshot.getValue().toString())
-               val info = dataSnapshot.getValue<RegisSub>()
-
-                //Log.d(TAG+"<><><><<><><><>",info.toString())
-                if(info!=null){
-                    Toast.makeText(this@ListSubject, info?.Seat.toString() ,Toast.LENGTH_LONG).show()
-                    //U.Seat =  info.Seat
-               }
-            }
-            override fun onCancelled(p0: DatabaseError) {
-
-            }
-        }
-        Firebase.database.reference.child("Student").child(idStudent_fromMain).addValueEventListener(StudentInfo)*/
-
-
-        //Toast.makeText(this@ListSubject, SeatInfo ,Toast.LENGTH_LONG).show()
-
-
-       /* val txtShowID = findViewById<TextView>(R.id.txt_show_id_stu)
-        txtShowID.text = idStudent_fromMain
-
-        val listView: ListView = findViewById(R.id.listView)*/
-        //val student_list = mutableListOf<Subject>()
-
-
-//        student_list.add(Subject("935306", "INTELLIGENT SYSTEM","1","2201","23 มี.ค. 2563","13:00-16:00","1"))
-//        student_list.add(Subject("935307", "COMPUTER GRAPHICS AND VISUAL COMPUTING","1","2417","1 เม.ย 2563","13:00-16:00","1"))
-//        student_list.add(Subject("935308", "INFORMATION STORAGE AND RETRIEVAL","1","2202","30 มี.ค. 2563","13:00-16:00","1"))
-
-        /*postSnapshot.key.toString()) {
-            student_list.add(Subject("935308"+i.toShort(), "INFORMATION STORAGE AND RETRIEVAL","1","2202","30 มี.ค. 2563","13:00-16:00","1"))
-        }*/
 
         Firebase.database.reference.child("Subject").addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -130,21 +81,6 @@ class ListSubject : AppCompatActivity() {
                 // ...
             }
         })
-
-
-
-
-        /*listView.adapter = MyListAdapter(
-            this,
-            R.layout.subject_list,
-            student_list
-        )*/
-
-
-        /*listView.setOnItemClickListener { parent, view, position, id ->
-            val selectedItem = parent.getItemAtPosition(position) as Subject
-            Toast.makeText(this, selectedItem.name, Toast.LENGTH_SHORT).show()
-        }*/
 
     }
 
