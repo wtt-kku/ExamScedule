@@ -31,6 +31,7 @@ class ListSubject : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_subject)
 
+
         Firebase.database.reference.child("Subject").addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 var l = intent
@@ -44,7 +45,7 @@ class ListSubject : AppCompatActivity() {
                 val eachSeat= Seat_fromMain.split(',')
                 numSeat = eachSeat.size
 
-                val txtShowID = findViewById<TextView>(R.id.txt_show_id_stu)
+                val txtShowID = findViewById<TextView>(R.id.txt_show_id_std)
                 txtShowID.text = idStudent_fromMain
 
                 val listView: ListView = findViewById(R.id.listView)

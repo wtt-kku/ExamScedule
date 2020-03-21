@@ -7,6 +7,10 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_staff_login.*
 
 class staff_login : AppCompatActivity() {
@@ -22,7 +26,7 @@ class staff_login : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         if(mAuth!!.currentUser != null){
             Log.d(TAG,"Continue with: "+mAuth!!.currentUser!!.email)
-            startActivity(Intent(this,staff_activity::class.java))
+            startActivity(Intent(this,staff_activity_main::class.java))
             finish()
         }
         btn_login.setOnClickListener{
@@ -56,7 +60,7 @@ class staff_login : AppCompatActivity() {
                     Toast.makeText(this,"เข้าสู่ระบบสำเร็จ",Toast.LENGTH_SHORT).show()
                     //toast("Sign in Successfully!")
                     Log.d(TAG, "เข้าสู่ระบบสำเร็จ !!")
-                    startActivity(Intent(this,staff_activity::class.java))
+                    startActivity(Intent(this,staff_activity_main::class.java))
                     finish()
                     }
                 }

@@ -43,9 +43,8 @@ class MainActivity : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
 
                 if(p0.hasChild(id)){
-                    //Toast.makeText(this@MainActivity,"ยินดีด้วยพบรหัส "+IDStudent +" ในระบบ",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity,"ยินดีด้วยพบรหัส "+IDStudent +" ในระบบ",Toast.LENGTH_SHORT).show()
                     Log.d(TAG,"พบ "+IDStudent +"ในระบบ")
-
                     val StudentInfo = object : ValueEventListener{
                         override fun onDataChange(dataSnapshot: DataSnapshot) {
                             //Log.d(TAG+"<><><><<><><><>",dataSnapshot.getValue().toString())
@@ -64,6 +63,7 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                     Firebase.database.reference.child("Student").child(IDStudent).addValueEventListener(StudentInfo)
+
 
 /*                    val l = Intent(this@MainActivity,ListSubject::class.java)
                     l.putExtra("idStudent",IDStudent)

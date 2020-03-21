@@ -62,18 +62,27 @@
 
         />
 
-        <TextView
-            android:onClick="goStaffLogin"
-            android:id="@+id/txt_to_staff_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit"
-            android:gravity="center"
-            android:paddingTop="180dp"
-            android:text="เข้าสู่ระบบสำหรับเจ้าหน้าที่"
-            android:textColor="#063A7E"
-            android:textStyle="bold" />
 
+        <LinearLayout
+
+            android:paddingTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:onClick="goStaffLogin"
+                android:id="@+id/txt_to_staff_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="เข้าสู่ระบบสำหรับเจ้าหน้าที่"
+                android:textColor="#063A7E"
+                android:textStyle="bold" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

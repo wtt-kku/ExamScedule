@@ -11,12 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListSubject"></activity>
+        <activity android:name=".AddSubject"></activity>
+        <activity
+            android:name=".staff_activity_main"
+            android:label="รายวิชาที่เปิดสอบ"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".ListSubject" />
         <activity android:name=".staff_activity" />
         <activity android:name=".staff_login" />
+        <!--
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
+        -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
