@@ -74,7 +74,8 @@
                     android:background="@drawable/textbox_input"
                     android:fontFamily="@font/kanit"
                     android:text=""
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:paddingStart="5dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -94,6 +95,7 @@
                     android:fontFamily="@font/kanit"
                     android:text=""
                     android:textSize="20dp"
+                    android:paddingStart="5dp"
                     android:background="@drawable/textbox_input"/>
 
                 <TextView
@@ -190,25 +192,26 @@
                 </LinearLayout>
 
 
-
                 <EditText
                     android:id="@+id/txt_add_seatstart"
-                    android:layout_marginLeft="10dp"
                     android:layout_width="60dp"
-                    android:layout_marginBottom="15dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/textbox_input"
                     android:fontFamily="@font/kanit"
-                    android:text=""
-                    android:textSize="18dp"
-                    android:background="@drawable/textbox_input"/>
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="18dp" />
 
                 <Button
                     android:id="@+id/btn_add"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#00297E"
+                    android:background="#069B1D"
                     android:fontFamily="@font/kanit"
                     android:text="ยืนยัน"
+
                     android:textColor="#E9E8E8" />
             </LinearLayout>
 

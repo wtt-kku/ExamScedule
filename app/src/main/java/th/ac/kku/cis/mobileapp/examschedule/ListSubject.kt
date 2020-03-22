@@ -55,7 +55,12 @@ class ListSubject : AppCompatActivity() {
                     for (i in 0..(numRegisSub!!-1)){
                         if(postSnapshot.key.equals(eachsubject[i])){
                             var Seat : Int? =  (eachSeat[i].toInt()  + postSnapshot.child("seatstart").value.toString().toInt())-1
-                            student_list.add(Subject(postSnapshot.key.toString(), postSnapshot.child("name").value.toString(),postSnapshot.child("room").value.toString(),postSnapshot.child("date").value.toString(),postSnapshot.child("time").value.toString(),Seat.toString()))
+
+                            student_list.add(Subject(postSnapshot.key.toString(),
+                                postSnapshot.child("name").value.toString(),
+                                postSnapshot.child("room").value.toString(),
+                                postSnapshot.child("date").value.toString(),
+                                postSnapshot.child("time").value.toString(),Seat.toString()))
                             break
                         }
                         else{

@@ -68,7 +68,6 @@ class staff_activity_main : AppCompatActivity() {
 
                 listView2.setOnItemClickListener { parent, view, position, id ->
                    val selectedItem = parent.getItemAtPosition(position) as SubjectForStaff
-
                     Toast.makeText(this@staff_activity_main, selectedItem.name, Toast.LENGTH_SHORT).show()
                 }
 
