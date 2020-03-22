@@ -30,7 +30,7 @@ class AddSubject : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_subject)
-        val room = arrayOf("เลือกห้อง","2202","2203","2214","2215")
+        val room = arrayOf("เลือกห้อง","2201","2202","2203","2415","2416","2417")
         val day = arrayOf("วัน","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31")
         val month = arrayOf("เดือน","ม.ค","ก.พ","มี.ค","เม.ย","พ.ค","มิ.ย","ก.ค","ส.ค","ก.ย","ต.ค","พ.ย","ธ.ค")
         val year = arrayOf("ปี","2563","2564","2565","2566")

@@ -3,6 +3,8 @@ package th.ac.kku.cis.mobileapp.examschedule
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -20,6 +22,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        tb_getid.addTextChangedListener(object : TextWatcher{
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+            override fun afterTextChanged(s: Editable?) {
+                enableSubmitIfReady()
+            }
+
+        });
 
         btn_check.setOnClickListener {
             IDStudent = tb_getid.text.toString()
@@ -87,6 +101,12 @@ class MainActivity : AppCompatActivity() {
     fun goStaffLogin(view: View){
         val i = Intent(this,staff_login::class.java)
         startActivity(i)
+    }
+
+    fun enableSubmitIfReady() {
+
+        val isReady = tb_getid.getText().toString().length > 10
+        btn_check.setEnabled(isReady)
     }
 
 }
