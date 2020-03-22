@@ -38,7 +38,7 @@
                 android:id="@+id/txt_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/kanit"
+                android:fontFamily="@font/mitr"
                 android:text="Email" />
 
             <EditText
@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:fontFamily="@font/kanit"
+                android:fontFamily="@font/mitr"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -59,7 +59,7 @@
                 android:id="@+id/txt_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/kanit"
+                android:fontFamily="@font/mitr"
                 android:text="Password" />
 
             <EditText
@@ -67,7 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:fontFamily="@font/kanit"
+                android:fontFamily="@font/mitr"
 
                 android:inputType="textPassword" />
 
@@ -75,15 +75,15 @@
                 android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:fontFamily="@font/kanit"
+                android:fontFamily="@font/mitr"
                 android:text="เข้าสู่ระบบ" />
 
             <TextView
                 android:id="@+id/txt_backmain"
-                android:onClick="goMain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/kanit_bold"
+                android:fontFamily="@font/mitr"
+                android:onClick="goMain"
                 android:paddingTop="75dp"
                 android:text="ย้อนกลับ"
                 android:textAlignment="center" />

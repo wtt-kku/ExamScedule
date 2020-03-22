@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#F39A0C"
-                android:fontFamily="@font/kanit"
+                android:fontFamily="@font/mitr"
                 android:paddingTop="15sp"
                 android:paddingBottom="15sp"
                 android:text="เพิ่มตารางสอบ"
@@ -37,16 +37,7 @@
             android:layout_height="wrap_content"
 
             android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
 
-                android:fontFamily="@font/kanit"
-                android:text="กรอกข้อมูลการสอบ"
-                android:textColor="#242222"
-                android:textSize="22dp" />
             <LinearLayout
                 android:layout_width="380dp"
                 android:layout_height="wrap_content"
@@ -57,7 +48,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit"
+                    android:fontFamily="@font/mitr"
                     android:text="รหัสวิชา"
                     android:textColor="#242222"
                     android:textSize="18dp"
@@ -74,54 +65,54 @@
                     android:background="@drawable/textbox_input"
                     android:fontFamily="@font/kanit"
                     android:text=""
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:paddingStart="5dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit"
+                    android:fontFamily="@font/mitr"
                     android:text="ชื่อวิชา"
                     android:textColor="#242222"
-                    android:textSize="18dp"/>
+                    android:textSize="18dp" />
 
 
                 <EditText
                     android:id="@+id/txt_add_name"
                     android:layout_marginLeft="10dp"
-                    android:layout_width="220dp"
+                    android:layout_width="match_parent"
                     android:layout_marginBottom="15dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/kanit"
                     android:text=""
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:paddingStart="5dp"
                     android:background="@drawable/textbox_input"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit"
+                    android:fontFamily="@font/mitr"
                     android:text="ห้องสอบ"
                     android:textColor="#242222"
                     android:textSize="18dp" />
 
 
                 <Spinner
-                    android:layout_marginLeft="10dp"
                     android:id="@+id/select_room"
-                    android:layout_marginBottom="15dp"
                     android:layout_width="150dp"
                     android:layout_height="30dp"
-                     />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="15dp"
+                    />
 
                 <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/kanit"
-                android:text="เลือกวันสอบ"
-                android:textColor="#242222"
-                android:textSize="18dp" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mitr"
+                    android:text="เลือกวันสอบ"
+                    android:textColor="#242222"
+                    android:textSize="18dp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -153,10 +144,11 @@
                         />
 
             </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/kanit"
+                    android:fontFamily="@font/mitr"
                     android:text="เลือกเวลาในการสอบ"
                     android:textColor="#242222"
                     android:textSize="18dp" />
@@ -177,10 +169,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/kanit"
+                        android:fontFamily="@font/mitr"
                         android:text="หมายเลขที่นั่งเริ่มต้น"
                         android:textColor="#242222"
-                        android:textSize="18dp"/>
+                        android:textSize="18dp" />
 
                     <ImageView
                         android:id="@+id/img_info_seatstart"
@@ -209,7 +201,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#069B1D"
-                    android:fontFamily="@font/kanit"
+                    android:fontFamily="@font/mitr"
                     android:text="ยืนยัน"
 
                     android:textColor="#E9E8E8" />
