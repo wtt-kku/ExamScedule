@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Exam Schedule</string>
+    <string name="app_name">ExamSchedule</string>
     <string name="title_activity_settings">Settings</string>
 
     <!-- Preference Titles -->

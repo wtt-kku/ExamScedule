@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/bg"
     tools:context=".MainActivity">
 
     <ImageView
@@ -15,7 +15,7 @@
         android:layout_marginTop="50dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/header" />
+        app:srcCompat="@drawable/header2" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -67,9 +67,9 @@
 
         <LinearLayout
 
-            android:paddingTop="100dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingTop="100dp">
 
             <TextView
 
@@ -82,7 +82,7 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="เข้าสู่ระบบสำหรับเจ้าหน้าที่"
-                android:textColor="#063A7E"
+                android:textColor="#FFFFFF"
                 android:textStyle="bold" />
 
         </LinearLayout>

@@ -75,16 +75,19 @@
                 android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="#BD4706"
                 android:fontFamily="@font/mitr"
-                android:text="เข้าสู่ระบบ" />
+                android:text="เข้าสู่ระบบ"
+                android:textColor="#ffffff" />
 
             <TextView
+                android:layout_marginTop="75dp"
                 android:id="@+id/txt_backmain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mitr"
                 android:onClick="goMain"
-                android:paddingTop="75dp"
                 android:text="ย้อนกลับ"
                 android:textAlignment="center" />
 
